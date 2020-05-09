@@ -32,7 +32,10 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <div>Replace this Div with your Routes</div>
-      <Route exact path='/' component={MovieList} />
+      <Route 
+        exact path='/' 
+        render={(props) => <MovieList {...props} movies={movieList}/>} 
+      />
     </div>
   );
 };
